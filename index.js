@@ -14,6 +14,7 @@ const connect = async() =>{
         throw error ;
     }
 }
+console.log("testing")
 
 
 
