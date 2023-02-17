@@ -6,6 +6,7 @@ import hotelsRouter from './routes/hotels.js'
 import usersRouter from './routes/users.js'
 import roomsRouter from './routes/rooms.js'
 
+// 25 min
 const app = express();
 dotenv.config()
 

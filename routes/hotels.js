@@ -1,9 +1,22 @@
 import express from 'express';
+import mongoose from 'mongoose';
+import Hotel from '../models/Hotel.js';
 const router = express.Router();
 
+// CREATE
 
-router.get('/',(req,res)=>{
-    res.send("hello, this is Hotels endpoint.")
+router.post('/',async (req,res)=>{
+    const newHotel = new Hotel(req.body)
+    try {
+        const saveHotel = await newHotel.save()
+        res.status(201).json(saveHotel);
+    } catch (error) {
+        res.status(500).json(err)
+    }
 })
+//UPDATE
+//DELETE
+//GET
+//GET ALL
 
 export default router;
