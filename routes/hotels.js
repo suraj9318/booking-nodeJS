@@ -52,12 +52,12 @@ router.get('/:id',async (req,res)=>{
 
 
 //GET ALL
-router.get('/',async (req,res)=>{
+router.get('/',async (req,res,next)=>{
     try {
         const getAllHotels = await Hotel.find()
         res.status(200).json(getAllHotels);
     } catch (error) {
-        res.status(500).json(err)
+       next(error)
     }
 })
 
