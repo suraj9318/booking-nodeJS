@@ -13,6 +13,7 @@ dotenv.config()
 
 
 // MIDDLEWARE
+app.use(express.json())
 
 app.use("/api/auth", authRouter);
 app.use("/api/users", usersRouter);
