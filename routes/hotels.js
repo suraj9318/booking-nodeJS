@@ -27,7 +27,20 @@ router.put('/:id',async (req,res)=>{
 
 
 //DELETE
+
+router.delete('/:id',async (req,res)=>{
+    try {
+         await Hotel.findByIdAndDelete(req.params.id)
+        res.status(200).json({msg : 'hotel has been deleted !!'});
+    } catch (error) {
+        res.status(500).json(err)
+    }
+})
+
+
 //GET
+
+
 //GET ALL
 
 export default router;
