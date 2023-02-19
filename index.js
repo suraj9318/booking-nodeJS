@@ -5,15 +5,16 @@ import authRouter from './routes/auth.js'
 import hotelsRouter from './routes/hotels.js'
 import usersRouter from './routes/users.js'
 import roomsRouter from './routes/rooms.js'
+import cookieParser from 'cookie-parser';
+// 52:11
 
-// 25 min
 const app = express();
 dotenv.config()
 
 
-
 // MIDDLEWARE
 app.use(express.json())
+app.use(cookieParser())
 
 app.use("/api/auth", authRouter);
 app.use("/api/users", usersRouter);
