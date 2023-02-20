@@ -17,7 +17,7 @@ const Roomchema = mongoose.Schema({
         type : String,
         required : true,
     },
-    roomNumbers : [{number : Number, unavailableDates: [{type : [Date]}]}]
+    roomNumbers : [{number : Number, unavailableDates: {type : [Date]}}]
 
 
 },{
@@ -26,4 +26,4 @@ const Roomchema = mongoose.Schema({
 
 const Room = mongoose.model('Room',Roomchema)
 
-export default User;
+export default Room;
