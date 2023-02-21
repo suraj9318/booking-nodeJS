@@ -26,4 +26,4 @@ const Roomchema = mongoose.Schema({
 
 const Room = mongoose.model('Room',Roomchema)
 
-export default Room;
+export default User;

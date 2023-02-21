@@ -6,7 +6,7 @@ import hotelsRouter from './routes/hotels.js'
 import usersRouter from './routes/users.js'
 import roomsRouter from './routes/rooms.js'
 import cookieParser from 'cookie-parser';
-// 1:16:39
+// 1:32:35 
 
 const app = express();
 dotenv.config()
